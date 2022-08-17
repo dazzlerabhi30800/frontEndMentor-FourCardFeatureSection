@@ -159,6 +159,8 @@ main {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
         gap: 2rem;
+        position: relative;
+        bottom: 50px;
     }
 
     .card {
@@ -186,6 +188,8 @@ main {
         padding: 2rem;
         position: relative;
         top: 130px;
+        transition: all .3s linear;
+        animation: move .5s linear infinite;
     }
 
     .card:nth-child(3) {
@@ -202,5 +206,39 @@ main {
         grid-row-start: 2;
         grid-column-start: 3;
         padding: 2rem;
+    }
+}
+
+@keyframes border {
+    0% {
+        border-top: 5px solid var(--Cyan);
+    }
+
+    25% {
+        border-top: 5px solid var(--Red);
+    }
+
+    50% {
+        border-top: 5px solid var(--Orange);
+    }
+
+    75% {
+        border-top: 5px solid var(--Blue);
+    }
+
+
+    100% {
+        border-top: 5px solid rebeccapurple;
+    }
+}
+
+@media(hover: hover) {
+    .card {
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transition: all .3s linear;
+        animation: border 4s linear infinite;
     }
 }
