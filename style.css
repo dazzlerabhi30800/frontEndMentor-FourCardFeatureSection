@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+    /* ### Neutral */
+
+    --Very-Dark-Blue: hsl(234, 12%, 34%);
+    --Grayish-Blue: hsl(229, 6%, 66%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+    --font-Poppins: 'Poppins', sans-serif;
+}
+
+
+body {
+    background: var(--Very-Light-Gray);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    padding: 2rem 0rem;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 3rem;
+    font-family: var(--font-Poppins);
+
+}
+
+.heading {
+    font-weight: 400;
+    color: var(--Grayish-Blue);
+    font-size: 1.4rem;
+}
+
+.sponsor {
+    color: var(--Very-Dark-Blue);
+    font-size: 1.5rem;
+    margin-top: -5px;
+}
+
+.description {
+    color: var(--Grayish-Blue);
+    margin: 8px auto;
+    width: clamp(310px, 30vw, 500px);
+    font-size: .9rem;
+}
+
+/* MAIN COMPONENT  */
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+.card--wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    padding: 1rem 1rem 1.5rem 1rem;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.144);
+    font-family: var(--font-Poppins);
+}
+
+.card h3 {
+    color: var(--Very-Dark-Blue);
+    font-size: 1.4rem;
+}
+
+.card .info {
+    color: var(--Grayish-Blue);
+    font-size: .9rem;
+    width: clamp(300px, 30vw, 400px);
+}
+
+.card img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0 0 0;
+    align-self: flex-end;
+}
+
+.card:nth-child(1) {
+    border-top: 5px solid var(--Cyan);
+}
+
+.card:nth-child(2) {
+    border-top: 5px solid var(--Red);
+}
+
+.card:nth-child(3) {
+    border-top: 5px solid var(--Orange);
+}
+
+.card:nth-child(4) {
+    border-top: 5px solid var(--Blue);
+}
+
+@media Screen and (min-width: 1000px) {
+    .card--wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .card h3 {
+        color: var(--Very-Dark-Blue);
+        font-size: 1.6rem;
+    }
+
+    .card .info {
+        color: var(--Grayish-Blue);
+        font-size: 1rem;
+        width: clamp(300px, 30vw, 400px);
+    }
+
+    .card:nth-child(1) {
+        padding: 2rem;
+    }
+
+    .card:nth-child(2) {
+        padding: 2rem;
+    }
+
+    .card:nth-child(3) {
+        padding: 2rem;
+    }
+
+    .card:nth-child(4) {
+        padding: 2rem;
+    }
+}
+
+@media Screen and (min-width: 1400px) {
+    .card--wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem 1rem 1.5rem 1rem;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 1px 1px 10px 4px rgba(0, 0, 0, 0.144);
+        font-family: var(--font-Poppins);
+    }
+
+
+    .card:nth-child(1) {
+        border-top: 5px solid var(--Cyan);
+        grid-row-start: 2;
+        padding: 2rem;
+        position: relative;
+    }
+
+    .card:nth-child(2) {
+        border-top: 5px solid var(--Red);
+        grid-column-start: 2;
+        padding: 2rem;
+        position: relative;
+        top: 130px;
+    }
+
+    .card:nth-child(3) {
+        border-top: 5px solid var(--Orange);
+        grid-row-start: 3;
+        grid-column-start: 2;
+        padding: 2rem;
+        position: relative;
+        bottom: 130px;
+    }
+
+    .card:nth-child(4) {
+        border-top: 5px solid var(--Blue);
+        grid-row-start: 2;
+        grid-column-start: 3;
+        padding: 2rem;
+    }
+}
