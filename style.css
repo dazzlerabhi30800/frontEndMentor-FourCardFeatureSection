@@ -352,12 +352,7 @@ main {
 @media(hover: hover) {
     .card {
         cursor: pointer;
-        transform: scale(1);
         transition: all .3s linear;
     }
 
-    .card:hover {
-        animation: border 4s linear infinite;
-        transform: scale(1.05);
-    }
 }
